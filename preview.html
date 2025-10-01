@@ -1,0 +1,32 @@
+<!-- 
+preview.html
+Discription: For inclusion in the custom template area of the Advanced Views on ld-archive.org.
+Used by the `Preview` View.
+Date: 2025-10-01
+Version: 1.0
+Author: Anthony Arblaster
+Github: @aarblaster
+Mastodon: @aarblaster@mastodonapp.uk
+-->
+
+<acf-view-68d2fe77f305e class="{{ _view.classes }} acf-view acf-view--id--{{ _view.id }} acf-view--object-id--{{ _view.object_id }}">
+
+	<ul class="acf-view__list wp-block-post-excerpt has-small-font-size" style="margin:0; padding:0; list-style:none;">
+	
+		
+		{% if ld_name.value %}
+			<li class="acf-view__ld-name">
+				<span class="acf-view__ld-name-label">{{ ld_name.label }}: </span>
+				<span class="acf-view__ld-name-field">{{ ld_name.value }}</span>
+			</li>
+		{% endif %}
+
+		{% if venue.value %}
+			<li class="acf-view__venue">
+				{{ venue.value }}
+			</li>
+		{% endif %}
+
+	</ul>
+
+</acf-view-68d2fe77f305e>
