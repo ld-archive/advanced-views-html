@@ -1,0 +1,43 @@
+<!-- 
+production-details.html
+Discription: For inclusion in the custom template area of the Advanced Views on ld-archive.org.
+Used by `Production Details` view.
+Date: 2025-10-01
+Version: 1.0
+Author: Anthony Arblaster
+Github: @aarblaster
+Mastodon: @aarblaster@mastodonapp.uk
+-->
+
+<acf-view-68d24f8f519a6 class="{{ _view.classes }} acf-view acf-view--id--{{ _view.id }} acf-view--object-id--{{ _view.object_id }}">
+
+	{% macro render_item(field, css_class) %}
+		{% if field.value %}
+			<li class="{{ css_class }}">
+				{% if field.label %}
+					<span class="{{ css_class }}-label">{{ field.label }}:</span>
+					<strong class="{{ css_class }}-field"> {{ field.value }}</strong>
+				{% else %}
+					<strong class="{{ css_class }}-field">{{ field.value }}</strong>
+				{% endif %}
+			</li>
+		{% endif %}
+	{% endmacro %}
+
+	<ul class="acf-view__list" style="margin:0; padding:0; list-style:none;">
+		{{ _self.render_item(author, 'acf-view__author') }}
+		{{ _self.render_item(show_composer, 'acf-view__show-composer') }}
+		{{ _self.render_item(libretto, 'acf-view__libretto') }}
+		{{ _self.render_item(first_performance_date, 'acf-view__first-performance-date') }}
+		{{ _self.render_item(producer, 'acf-view__producer') }}
+		{{ _self.render_item(venue, 'acf-view__venue') }}
+		{{ _self.render_item(venue_city, 'acf-view__venue-city') }}
+		{{ _self.render_item(venue_address, 'acf-view__venue-address') }}
+		{{ _self.render_item(director, 'acf-view__director') }}
+		{{ _self.render_item(md, 'acf-view__md') }}
+		{{ _self.render_item(designer, 'acf-view__designer') }}
+		{{ _self.render_item(sound_designer, 'acf-view__sound-designer') }}
+		{{ _self.render_item(composer_production, 'acf-view__composer-production') }}
+	</ul>
+
+</acf-view-68d24f8f519a6>
