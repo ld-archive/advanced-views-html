@@ -1,5 +1,6 @@
 # advanced-views-html
 ![GitHub](https://img.shields.io/github/license/ld-archive/advanced-views-html.svg)
+
 A collection of HTML templates for Advanced Views to enable post metadata to appear consistently on [**ld-archive.org**](https://ld-archive.org).
 
 ## About
