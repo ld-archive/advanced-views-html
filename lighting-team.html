@@ -1,0 +1,54 @@
+<!-- 
+lighting-team.html
+Discription: For inclusion in the custom template area of the Advanced Views on ld-archive.org.
+Used by `Lighting Team` view.
+Date: 2025-10-01
+Version: 1.0
+Author: Anthony Arblaster
+Github: @aarblaster
+Mastodon: @aarblaster@mastodonapp.uk
+-->
+
+<acf-view-68d24deb3e5ce class="{{ _view.classes }} acf-view acf-view--id--{{ _view.id }} acf-view--object-id--{{ _view.object_id }}">
+
+	{% macro render_item(field, css_class) %}
+		{% if field.value %}
+			<li class="{{ css_class }}">
+				{% if field.label %}
+					<span class="{{ css_class }}-label">{{ field.label }}:</span>
+					<strong class="{{ css_class }}-field"> {{ field.value }}</strong>
+				{% else %}
+					<strong class="{{ css_class }}-field">{{ field.value }}</strong>
+				{% endif %}
+			</li>
+		{% endif %}
+	{% endmacro %}
+
+	<ul class="acf-view__list" style="margin:0; padding:0; list-style:none;">
+		{{ _self.render_item(ld_name, 'acf-view__ld-name') }}
+		{% if ld_website.value %}
+			<li class="acf-view__ld-website">
+				<a target="{{ ld_website.target }}" href="{{ ld_website.value }}">
+					{{ ld_website.linkLabel|default(ld_website.title) }}
+				</a>
+			</li>
+		{% endif %}
+		{{ _self.render_item(associate_ld, 'acf-view__associate-ld') }}
+		{{ _self.render_item(assistant, 'acf-view__assistant') }}
+		{{ _self.render_item(production_electrician, 'acf-view__production-electrician') }}
+		{{ _self.render_item(programmer, 'acf-view__programmer') }}
+		{{ _self.render_item(other_team, 'acf-view__other-team') }}
+	</ul>
+
+	{% if ld_bio2.value %}
+		<div class="acf-view__ld-bio2">
+			<h4 class="acf-view__ld-bio2-label">
+				{{ ld_bio2.label }}
+			</h4>
+			<p class="acf-view__ld-bio2-field">
+				{{ ld_bio2.value }}
+			</p>
+		</div>
+	{% endif %}
+
+</acf-view-68d24deb3e5ce>

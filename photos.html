@@ -1,0 +1,29 @@
+<!-- 
+photos.html
+Discription: For inclusion in the custom template area of the Advanced Views on ld-archive.org.
+Date: 2025-10-01
+Version: 1.0
+Author: Anthony Arblaster
+Github: @aarblaster
+Mastodon: @aarblaster@mastodonapp.uk
+-->
+
+<acf-view-68d81ad97954a class="{{ _view.classes }}acf-view acf-view--id--{{ _view.id }} acf-view--object-id--{{ _view.object_id }}">
+
+	{% if photographer.value %}
+		<li class="acf-view__photographer">
+			<span class="acf-view__photographer-label">
+				{{ photographer.label }}: 
+			</span>
+			<strong class="acf-view__photographer-field">
+				{{ photographer.value }}
+			</strong>
+		</li>
+	{% endif %}
+
+
+	{% if photos.value %}
+		<img class="acf-view__photos" src="{{ photos.value }}" width="{{ photos.width }}" height="{{ photos.height }}" alt="{{ photos.alt }}" decoding="{{ photos.decoding }}" loading="{{ photos.loading }}" srcset="{{ photos.srcset }}" sizes="{{ photos.sizes }}">
+	{% endif %}
+
+</acf-view-68d81ad97954a>
