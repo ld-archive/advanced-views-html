@@ -1,4 +1,7 @@
-# ACF-CSS
+# advanced-views-html
+![GitHub release](https://img.shields.io/github/release/ld-archive/advanced-views-html.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/ld-archive/advanced-views-html/total.svg)
+![GitHub](https://img.shields.io/github/license/ld-archive/advanced-views-html.svg)
 A collection of HTML templates for Advanced Views to enable post metadata to appear consistently on [**ld-archive.org**](https://ld-archive.org).
 
 ## About
